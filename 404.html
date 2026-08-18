@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Page Not Found — Stackly</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="error-page">
+  <main class="error-main">
+    <a href="index.html" aria-label="Stackly home"><img class="site-logo" src="assets/stackly-logo.webp" alt="Stackly"></a>
+    <p class="error-code">404</p>
+    <h1>Lost in the game?</h1>
+    <p>This page is currently outside the playable area.</p>
+    <a class="btn btn-primary" id="goBackButton" href="index.html">Go Back</a>
+  </main>
+  <script src="main.js"></script>
+  <script>
+    document.getElementById('goBackButton').addEventListener('click', function (event) {
+      if (document.referrer || history.length > 1) {
+        event.preventDefault();
+        history.back();
+      }
+    });
+  </script>
+</body>
+</html>

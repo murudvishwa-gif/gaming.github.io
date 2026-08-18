@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Stackly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">🎮 Free shipping on orders over ₹2500 · New drops every Friday</div>
+<nav class="navbar">
+  <div class="wrap">
+    <a href="index.html" class="logo" aria-label="Stackly home"><img class="site-logo" src="assets/stackly-logo.webp" alt="Stackly"></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn btn-ghost btn-sm desktop-only" data-open-auth="login">Log In</button>
+      <button class="btn btn-primary btn-sm" data-open-auth="signup">Sign Up</button>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div id="power-meter"><span class="readout">PWR 0%</span><div class="fill"></div></div>
+
+<!-- 1. HERO -->
+<header class="hero page-visual-hero" style="min-height:58vh">
+  <img class="page-hero-image" src="assets/services-hero.webp" alt="Technician assembling a premium custom gaming PC">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="wrap hero-content">
+    <div class="eyebrow">Select Mode</div>
+    <h1><span>Our</span> <span style="color:var(--white)">Services.</span></h1>
+    <p class="lead">From full custom builds to same-week repairs — everything your setup needs, handled by technicians who actually game.</p>
+  </div>
+</header>
+
+<!-- 2. SERVICES GRID -->
+<section>
+  <div class="wrap">
+    <div class="tabs" data-tabs="svc">
+      <button class="tab active" data-filter="all">All</button>
+      <button class="tab" data-filter="build">Builds</button>
+      <button class="tab" data-filter="repair">Repairs</button>
+      <button class="tab" data-filter="coach">Coaching</button>
+      <button class="tab" data-filter="esports">Esports</button>
+    </div>
+    <div class="grid g-3 stagger">
+      <div class="cart-card reveal" data-group="svc" data-cat="build"><span class="badge badge-gold">Build</span><h3 style="margin-top:14px">Custom PC Builds</h3><p class="lead" style="font-size:.88rem;margin-top:8px">Hand-assembled rigs tuned to your budget & games.</p></div>
+      <div class="cart-card reveal" data-group="svc" data-cat="repair"><span class="badge badge-coral">Repair</span><h3 style="margin-top:14px">Console & PC Repairs</h3><p class="lead" style="font-size:.88rem;margin-top:8px">Diagnostics within 24 hours, most fixes same week.</p></div>
+      <div class="cart-card reveal" data-group="svc" data-cat="coach"><span class="badge badge-mint">Coaching</span><h3 style="margin-top:14px">1-on-1 Game Coaching</h3><p class="lead" style="font-size:.88rem;margin-top:8px">Ranked coaching from verified competitive players.</p></div>
+      <div class="cart-card reveal" data-group="svc" data-cat="build"><span class="badge badge-gold">Build</span><h3 style="margin-top:14px">Trade-In Program</h3><p class="lead" style="font-size:.88rem;margin-top:8px">Fair-value credit toward your next upgrade.</p></div>
+      <div class="cart-card reveal" data-group="svc" data-cat="esports"><span class="badge badge-coral">Esports</span><h3 style="margin-top:14px">Team Sponsorship</h3><p class="lead" style="font-size:.88rem;margin-top:8px">Gear & funding support for amateur esports rosters.</p></div>
+      <div class="cart-card reveal" data-group="svc" data-cat="repair"><span class="badge badge-mint">Repair</span><h3 style="margin-top:14px">Gear Rentals</h3><p class="lead" style="font-size:.88rem;margin-top:8px">Rent VR headsets & consoles for events or trials.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. HOW IT WORKS (legit sequence) -->
+<section class="section-alt">
+  <div class="wrap">
+    <div class="section-head center"><div class="eyebrow">Quest Steps</div><h2>How It Works</h2></div>
+    <div class="grid g-4 stagger">
+      <div class="reveal" style="text-align:center"><div style="font-family:var(--font-display);color:var(--gold);font-size:2rem">01</div><h3 style="font-size:1rem;margin-top:10px">Tell Us Your Goal</h3><p class="lead" style="font-size:.86rem;margin-top:8px">Budget, games, and use case — online or in-store.</p></div>
+      <div class="reveal" style="text-align:center"><div style="font-family:var(--font-display);color:var(--gold);font-size:2rem">02</div><h3 style="font-size:1rem;margin-top:10px">Get a Free Quote</h3><p class="lead" style="font-size:.86rem;margin-top:8px">Our advisors spec out the right parts, no upsells.</p></div>
+      <div class="reveal" style="text-align:center"><div style="font-family:var(--font-display);color:var(--gold);font-size:2rem">03</div><h3 style="font-size:1rem;margin-top:10px">We Build & Test</h3><p class="lead" style="font-size:.86rem;margin-top:8px">Assembled, stress-tested, and benchmarked in-house.</p></div>
+      <div class="reveal" style="text-align:center"><div style="font-family:var(--font-display);color:var(--gold);font-size:2rem">04</div><h3 style="font-size:1rem;margin-top:10px">Ship & Support</h3><p class="lead" style="font-size:.86rem;margin-top:8px">Delivered set up, backed by our 2-year warranty.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. PRICING -->
+<section>
+  <div class="wrap">
+    <div class="section-head center"><div class="eyebrow">Choose Your Loadout</div><h2>Service Plans</h2></div>
+    <div class="grid g-3 stagger">
+      <div class="cart-card reveal price-card"><h3>Basic</h3><div class="amount">₹999<span>/visit</span></div><ul><li>Diagnostics & cleaning</li><li>Software tune-up</li><li>7-day check-in call</li></ul><button class="btn btn-ghost btn-block" data-open-auth="signup">Get Started</button></div>
+      <div class="cart-card reveal price-card featured"><span class="tag">Most Popular</span><h3>Pro</h3><div class="amount">₹2,499<span>/visit</span></div><ul><li>Everything in Basic</li><li>Hardware upgrade install</li><li>Performance benchmarking</li><li>90-day service warranty</li></ul><button class="btn btn-primary btn-block" data-open-auth="signup">Get Started</button></div>
+      <div class="cart-card reveal price-card"><h3>Elite</h3><div class="amount">₹5,999<span>/visit</span></div><ul><li>Everything in Pro</li><li>Full custom build service</li><li>1-year priority support</li><li>Free annual tune-up</li></ul><button class="btn btn-ghost btn-block" data-open-auth="signup">Get Started</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. TURNAROUND -->
+<section class="section-alt">
+  <div class="wrap grid g-4 stagger">
+    <div class="reveal cart-card" style="text-align:center"><div class="num" style="font-family:var(--font-display);color:var(--gold);font-size:1.8rem" data-count="24" data-suffix="hr">0</div><p style="color:var(--ash);font-size:.85rem;margin-top:6px">Diagnostic Turnaround</p></div>
+    <div class="reveal cart-card" style="text-align:center"><div class="num" style="font-family:var(--font-display);color:var(--gold);font-size:1.8rem" data-count="5" data-suffix="d">0</div><p style="color:var(--ash);font-size:.85rem;margin-top:6px">Avg. Repair Time</p></div>
+    <div class="reveal cart-card" style="text-align:center"><div class="num" style="font-family:var(--font-display);color:var(--gold);font-size:1.8rem" data-count="2" data-suffix="yr">0</div><p style="color:var(--ash);font-size:.85rem;margin-top:6px">Warranty Coverage</p></div>
+    <div class="reveal cart-card" style="text-align:center"><div class="num" style="font-family:var(--font-display);color:var(--gold);font-size:1.8rem" data-count="98" data-suffix="%">0</div><p style="color:var(--ash);font-size:.85rem;margin-top:6px">First-Fix Success Rate</p></div>
+  </div>
+</section>
+
+<!-- 6. CASE STUDY -->
+<section>
+  <div class="wrap grid g-2" style="align-items:center;gap:60px">
+    <div class="cart-card reveal-left" style="padding:36px">
+      <span class="badge badge-mint">Case Study</span>
+      <h3 style="margin-top:14px">Team Vortex Championship Build</h3>
+      <p class="lead" style="margin-top:10px;font-size:.9rem">Outfitted a 5-person amateur roster with matching rigs two weeks before regionals. Zero downtime across the tournament weekend.</p>
+    </div>
+    <div class="reveal-right">
+      <div class="eyebrow">Proof of Work</div>
+      <h2>Real Results</h2>
+      <p class="lead" style="margin-top:16px">We don't just sell hardware — we support the outcome. From LAN-ready builds to on-site tech support at events, our services scale from solo setups to full teams.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7. FAQ -->
+<section class="section-alt">
+  <div class="wrap" style="max-width:760px">
+    <div class="section-head center"><div class="eyebrow">Need to Know</div><h2>Frequently Asked</h2></div>
+    <div class="accordion">
+      <div class="accordion-item"><button>How long does a custom build take? <span class="plus">+</span></button><div class="accordion-panel"><p>Most builds are completed and tested within 3–5 business days of parts confirmation.</p></div></div>
+      <div class="accordion-item"><button>Do you repair out-of-warranty consoles? <span class="plus">+</span></button><div class="accordion-panel"><p>Yes — we service most major consoles regardless of original warranty status, with transparent flat-rate pricing.</p></div></div>
+      <div class="accordion-item"><button>Can I upgrade a plan after booking? <span class="plus">+</span></button><div class="accordion-panel"><p>Absolutely, just mention it during your intake call and we'll adjust the quote.</p></div></div>
+      <div class="accordion-item"><button>Do you offer on-site support for events? <span class="plus">+</span></button><div class="accordion-panel"><p>Yes, our Elite plan includes on-site technician support for tournaments and LAN events.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. CTA -->
+<section>
+  <div class="wrap cart-card reveal" style="padding:56px;text-align:center;max-width:760px;margin:0 auto">
+    <div class="eyebrow" style="justify-content:center">Ready Player One</div>
+    <h2>Book a Service Today</h2>
+    <p class="lead" style="margin:14px auto 26px">Tell us what you're building, fixing, or upgrading — we'll take it from there.</p>
+    <a href="contact.html" class="btn btn-primary">Book Now</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="grid footer-grid">
+      <div>
+        <a href="index.html" class="logo" aria-label="Stackly home"><img class="site-logo" src="assets/stackly-logo.webp" alt="Stackly"></a>
+        <p class="lead" style="margin-top:14px;font-size:.88rem">Your local gaming store, shipping nationwide since 2016.</p>
+        <div class="social-row" style="margin-top:20px"><a href="#">X</a><a href="#">IG</a><a href="#">YT</a><a href="#">DC</a></div>
+      </div>
+      <div><h4>Shop</h4><ul><li><a href="services.html">PC Builds</a></li><li><a href="services.html">Consoles</a></li><li><a href="services.html">Peripherals</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Support</h4><ul><li><a href="contact.html">Help Center</a></li><li><a href="services.html">Warranty</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Stackly Gaming Co. All rights reserved.</span><span>Made for players, by players.</span></div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="authModal">
+  <div class="modal-box">
+    <button class="modal-close" aria-label="Close">✕</button>
+    <div class="auth-tabs"><button id="tabLogin" class="active">Log In</button><button id="tabSignup">Sign Up</button></div>
+    <form id="formLogin">
+      <div class="field"><label>Email</label><input type="email" placeholder="you@email.com" required></div>
+      <div class="field"><label>Password</label><input type="password" placeholder="••••••••" required></div>
+      <button type="submit" class="btn btn-primary btn-block">Enter the Arcade</button>
+      <p class="form-note">Tip: use an email containing "admin" to preview the admin dashboard.</p>
+    </form>
+    <form id="formSignup" style="display:none">
+      <div class="field"><label>Gamertag</label><input type="text" placeholder="Your display name" required></div>
+      <div class="field"><label>Email</label><input type="email" placeholder="you@email.com" required></div>
+      <div class="field"><label>Password</label><input type="password" placeholder="Create a password" required></div>
+      <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+    </form>
+    <div class="auth-switch"><span>New here? <button data-switch-auth="signup">Sign up</button></span></div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Create Account — Stackly</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+  <main class="auth-page-shell">
+    <section class="auth-page-panel">
+      <a href="index.html" aria-label="Stackly home"><img class="site-logo" src="assets/stackly-logo.webp" alt="Stackly"></a>
+      <div class="auth-page-copy">
+        <div class="eyebrow">Join Stackly</div>
+        <h1>Start your journey.</h1>
+        <p>Create your player account to save games, track orders, earn rewards, and unlock member drops.</p>
+        <form class="premium-auth-form" id="formSignup">
+          <div class="field"><label for="signupName">Display name</label><input id="signupName" type="text" placeholder="Your player name" autocomplete="name" required></div>
+          <div class="field"><label for="signupEmail">Email address</label><input id="signupEmail" type="email" placeholder="you@email.com" autocomplete="email" required></div>
+          <div class="field"><label for="signupPassword">Password</label><input id="signupPassword" type="password" placeholder="At least 6 characters" autocomplete="new-password" minlength="6" required></div>
+          <div class="auth-options"><label><input type="checkbox" required> I accept the terms</label><a href="404.html">View terms</a></div>
+          <button class="btn btn-primary" type="submit">Create Account</button>
+        </form>
+        <p class="auth-page-switch">Already a member? <a href="login.html">Log in</a></p>
+        <div class="auth-trust"><span>Free account</span><span>Member rewards</span><span>No hidden fees</span></div>
+      </div>
+    </section>
+    <aside class="auth-page-visual"><a class="auth-back" href="index.html">← Browse games</a><img src="assets/blog-hero.webp" alt="Premium Stackly gaming setup"><div class="auth-visual-copy"><h2>Everything you play. One place.</h2><p>Build your library and discover experiences selected for the way you play.</p></div></aside>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

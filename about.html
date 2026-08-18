@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Stackly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">🎮 Free shipping on orders over ₹2500 · New drops every Friday</div>
+<nav class="navbar">
+  <div class="wrap">
+    <a href="index.html" class="logo" aria-label="Stackly home"><img class="site-logo" src="assets/stackly-logo.webp" alt="Stackly"></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn btn-ghost btn-sm desktop-only" data-open-auth="login">Log In</button>
+      <button class="btn btn-primary btn-sm" data-open-auth="signup">Sign Up</button>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div id="power-meter"><span class="readout">PWR 0%</span><div class="fill"></div></div>
+
+<!-- 1. HERO -->
+<header class="hero page-visual-hero" style="min-height:64vh">
+  <img class="page-hero-image" src="assets/about-hero.webp" alt="Game creators collaborating in a cinematic development studio">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="wrap hero-content">
+    <div class="eyebrow">Player Profile</div>
+    <h1><span>Built By</span> <span style="color:var(--white)">Gamers.</span></h1>
+    <p class="lead">Stackly started in a college dorm room with one soldering iron and a broken GPU. A decade later, we're the store gamers trust to get their setup right the first time.</p>
+  </div>
+</header>
+
+<!-- 2. ORIGIN TIMELINE -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Save File</div>
+      <h2>Our Origin Story</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal-left"><span class="yr">2016</span><h3>The First Build</h3><p class="lead" style="margin-top:8px">Two friends started refurbishing GPUs out of a hostel room and selling them to classmates.</p></div>
+      <div class="timeline-item reveal-left"><span class="yr">2018</span><h3>First Storefront</h3><p class="lead" style="margin-top:8px">Opened a 400 sq. ft. shop in Bengaluru, focused entirely on custom PC builds.</p></div>
+      <div class="timeline-item reveal-left"><span class="yr">2021</span><h3>Nationwide Shipping</h3><p class="lead" style="margin-top:8px">Launched e-commerce and started shipping consoles and peripherals across India.</p></div>
+      <div class="timeline-item reveal-left"><span class="yr">2023</span><h3>Esports Division</h3><p class="lead" style="margin-top:8px">Began sponsoring amateur esports teams and supplying tournament-grade gear.</p></div>
+      <div class="timeline-item reveal-left"><span class="yr">2026</span><h3>128,000 Players Strong</h3><p class="lead" style="margin-top:8px">Today Stackly serves a nationwide community with same-day dispatch and a real support team.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. MISSION & VALUES -->
+<section class="section-alt">
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="eyebrow">Core Stats</div>
+      <h2>What We Stand For</h2>
+    </div>
+    <div class="grid g-4 stagger">
+      <div class="cart-card reveal"><h3 style="font-size:1rem;color:var(--gold)">Honesty First</h3><p class="lead" style="font-size:.88rem;margin-top:8px">No inflated specs, no fake urgency. Just straight advice.</p></div>
+      <div class="cart-card reveal"><h3 style="font-size:1rem;color:var(--gold)">Built to Last</h3><p class="lead" style="font-size:.88rem;margin-top:8px">We stock gear we'd put in our own rigs — nothing less.</p></div>
+      <div class="cart-card reveal"><h3 style="font-size:1rem;color:var(--gold)">Community Over Sales</h3><p class="lead" style="font-size:.88rem;margin-top:8px">We sponsor local tournaments before we run ad campaigns.</p></div>
+      <div class="cart-card reveal"><h3 style="font-size:1rem;color:var(--gold)">Fast, Always</h3><p class="lead" style="font-size:.88rem;margin-top:8px">Same-day dispatch isn't a promo, it's the default.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. IMPACT STATS -->
+<section class="stat-strip" style="padding:0">
+  <div class="wrap grid">
+    <div class="stat"><div class="num" data-count="10" data-suffix="+">0</div><div class="label">Years Running</div></div>
+    <div class="stat"><div class="num" data-count="52" data-suffix="">0</div><div class="label">Team Members</div></div>
+    <div class="stat"><div class="num" data-count="18" data-suffix="">0</div><div class="label">Cities Shipped To</div></div>
+    <div class="stat"><div class="num" data-count="340" data-suffix="+">0</div><div class="label">Esports Teams Backed</div></div>
+  </div>
+</section>
+
+<!-- 5. TEAM -->
+<section>
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="eyebrow">The Squad</div>
+      <h2>Meet the Team</h2>
+    </div>
+    <div class="grid g-4 stagger">
+      <div class="cart-card team-card reveal"><img class="team-photo" src="assets/team-rehan.webp" alt="Rehan Kapoor, Founder and Chief Builder" loading="lazy"><h3>Rehan Kapoor</h3><p>Founder & Chief Builder</p></div>
+      <div class="cart-card team-card reveal"><img class="team-photo" src="assets/team-sana.webp" alt="Sana Ahuja, Head of Operations" loading="lazy"><h3>Sana Ahuja</h3><p>Head of Operations</p></div>
+      <div class="cart-card team-card reveal"><img class="team-photo" src="assets/team-dev.webp" alt="Dev Varma, Lead Hardware Technician" loading="lazy"><h3>Dev Varma</h3><p>Lead Hardware Tech</p></div>
+      <div class="cart-card team-card reveal"><img class="team-photo" src="assets/team-meera.webp" alt="Meera Iyer, Community and Esports Manager" loading="lazy"><h3>Meera Iyer</h3><p>Community & Esports</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. CULTURE -->
+<section class="section-alt">
+  <div class="wrap grid g-2" style="align-items:center;gap:60px">
+    <div class="reveal-left">
+      <div class="eyebrow">Behind The Screen</div>
+      <h2>Life at Stackly</h2>
+      <p class="lead" style="margin-top:16px">Our warehouse runs on LAN parties, release-day countdowns and a strict no-boring-hardware policy. Half the team streams their builds live.</p>
+    </div>
+    <div class="grid g-2 reveal-right">
+      <figure class="culture-card"><img src="assets/about-hero.webp" alt="Stackly warehouse and creative studio floor" loading="lazy"><figcaption>Warehouse Floor</figcaption></figure>
+      <figure class="culture-card"><img src="assets/services-hero.webp" alt="Technician working at the custom PC build bench" loading="lazy"><figcaption>Build Bench</figcaption></figure>
+      <figure class="culture-card"><img src="assets/blog-hero.webp" alt="Gaming workstations prepared for a team LAN night" loading="lazy"><figcaption>LAN Night</figcaption></figure>
+      <figure class="culture-card"><img src="assets/game-40.webp" alt="Competitive gaming tournament scene" loading="lazy"><figcaption>Tournament Booth</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 7. PARTNERS -->
+<section>
+  <div class="wrap">
+    <div class="section-head center"><div class="eyebrow">Co-op Partners</div><h2>Brands We Work With</h2></div>
+    <div class="marquee" style="border:1px solid var(--line-soft);border-radius:12px">
+      <div class="marquee-track">
+        <span class="marquee-item"><strong>ASUS ROG</strong></span><span class="marquee-item"><strong>Razer</strong></span><span class="marquee-item"><strong>Sony PlayStation</strong></span><span class="marquee-item"><strong>NVIDIA</strong></span><span class="marquee-item"><strong>Logitech G</strong></span><span class="marquee-item"><strong>Corsair</strong></span>
+        <span class="marquee-item"><strong>ASUS ROG</strong></span><span class="marquee-item"><strong>Razer</strong></span><span class="marquee-item"><strong>Sony PlayStation</strong></span><span class="marquee-item"><strong>NVIDIA</strong></span><span class="marquee-item"><strong>Logitech G</strong></span><span class="marquee-item"><strong>Corsair</strong></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. CAREERS CTA -->
+<section class="section-alt">
+  <div class="wrap cart-card reveal" style="padding:56px;text-align:center;max-width:760px;margin:0 auto">
+    <div class="eyebrow" style="justify-content:center">Now Hiring</div>
+    <h2>Join Our Party</h2>
+    <p class="lead" style="margin:14px auto 26px">We're always looking for builders, writers and community managers who live and breathe games.</p>
+    <a href="contact.html" class="btn btn-primary">View Open Roles</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="grid footer-grid">
+      <div>
+        <a href="index.html" class="logo" aria-label="Stackly home"><img class="site-logo" src="assets/stackly-logo.webp" alt="Stackly"></a>
+        <p class="lead" style="margin-top:14px;font-size:.88rem">Your local gaming store, shipping nationwide since 2016.</p>
+        <div class="social-row" style="margin-top:20px"><a href="#">X</a><a href="#">IG</a><a href="#">YT</a><a href="#">DC</a></div>
+      </div>
+      <div><h4>Shop</h4><ul><li><a href="services.html">PC Builds</a></li><li><a href="services.html">Consoles</a></li><li><a href="services.html">Peripherals</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Support</h4><ul><li><a href="contact.html">Help Center</a></li><li><a href="services.html">Warranty</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Stackly Gaming Co. All rights reserved.</span><span>Made for players, by players.</span></div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="authModal">
+  <div class="modal-box">
+    <button class="modal-close" aria-label="Close">✕</button>
+    <div class="auth-tabs"><button id="tabLogin" class="active">Log In</button><button id="tabSignup">Sign Up</button></div>
+    <form id="formLogin">
+      <div class="field"><label>Email</label><input type="email" placeholder="you@email.com" required></div>
+      <div class="field"><label>Password</label><input type="password" placeholder="••••••••" required></div>
+      <button type="submit" class="btn btn-primary btn-block">Enter the Arcade</button>
+      <p class="form-note">Tip: use an email containing "admin" to preview the admin dashboard.</p>
+    </form>
+    <form id="formSignup" style="display:none">
+      <div class="field"><label>Gamertag</label><input type="text" placeholder="Your display name" required></div>
+      <div class="field"><label>Email</label><input type="email" placeholder="you@email.com" required></div>
+      <div class="field"><label>Password</label><input type="password" placeholder="Create a password" required></div>
+      <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+    </form>
+    <div class="auth-switch"><span>New here? <button data-switch-auth="signup">Sign up</button></span></div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

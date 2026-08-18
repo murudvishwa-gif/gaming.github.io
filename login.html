@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Log In — Stackly</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+  <main class="auth-page-shell">
+    <section class="auth-page-panel">
+      <a href="index.html" aria-label="Stackly home"><img class="site-logo" src="assets/stackly-logo.webp" alt="Stackly"></a>
+      <div class="auth-page-copy">
+        <div class="eyebrow">Welcome back</div>
+        <h1>Ready to play?</h1>
+        <p>Sign in to continue your library, orders, rewards, and personalized recommendations.</p>
+        <form class="premium-auth-form" id="formLogin">
+          <div class="field"><label for="loginEmail">Email address</label><input id="loginEmail" type="email" placeholder="you@email.com" autocomplete="email" required></div>
+          <div class="field"><label for="loginPassword">Password</label><input id="loginPassword" type="password" placeholder="Enter your password" autocomplete="current-password" minlength="6" required></div>
+          <div class="auth-options"><label><input type="checkbox"> Remember me</label><a href="404.html">Forgot password?</a></div>
+          <button class="btn btn-primary" type="submit">Log In</button>
+        </form>
+        <p class="auth-page-switch">New to Stackly? <a href="signup.html">Create an account</a></p>
+        <div class="auth-trust"><span>Secure sign in</span><span>24/7 support</span><span>Privacy protected</span></div>
+      </div>
+    </section>
+    <aside class="auth-page-visual"><a class="auth-back" href="index.html">← Browse games</a><img src="assets/about-hero.webp" alt="Stackly gaming community"><div class="auth-visual-copy"><h2>Your next story is waiting.</h2><p>One account for games, builds, rewards, and the entire Stackly community.</p></div></aside>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

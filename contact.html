@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Stackly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">🎮 Free shipping on orders over ₹2500 · New drops every Friday</div>
+<nav class="navbar">
+  <div class="wrap">
+    <a href="index.html" class="logo" aria-label="Stackly home"><img class="site-logo" src="assets/stackly-logo.webp" alt="Stackly"></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn btn-ghost btn-sm desktop-only" data-open-auth="login">Log In</button>
+      <button class="btn btn-primary btn-sm" data-open-auth="signup">Sign Up</button>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div id="power-meter"><span class="readout">PWR 0%</span><div class="fill"></div></div>
+
+<!-- 1. HERO -->
+<header class="hero page-visual-hero" style="min-height:50vh">
+  <img class="page-hero-image" src="assets/contact-hero.webp" alt="Friendly gaming support specialist ready to help players">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="wrap hero-content">
+    <div class="eyebrow">Open a Ticket</div>
+    <h1><span>Get In</span> <span style="color:var(--white)">Touch.</span></h1>
+    <p class="lead">Questions about an order, a build, or a partnership? Our team replies within one business day.</p>
+  </div>
+</header>
+
+<!-- 2. CONTACT FORM + 3. INFO CARDS -->
+<section style="padding-top:20px">
+  <div class="wrap grid g-2" style="align-items:start;gap:50px">
+    <div class="cart-card reveal-left" style="padding:36px">
+      <h3 style="margin-bottom:22px">Send Us a Message</h3>
+      <form id="contactForm">
+        <div class="grid g-2">
+          <div class="field"><label>Name</label><input type="text" placeholder="Your name" required></div>
+          <div class="field"><label>Email</label><input type="email" placeholder="you@email.com" required></div>
+        </div>
+        <div class="field"><label>Subject</label>
+          <select required>
+            <option value="">Select a topic</option>
+            <option>Order Support</option>
+            <option>Repair Booking</option>
+            <option>Partnerships</option>
+            <option>General Question</option>
+          </select>
+        </div>
+        <div class="field"><label>Message</label><textarea placeholder="How can we help?" required></textarea></div>
+        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+        <p class="form-note form-success" style="display:none;color:var(--mint)">✓ Message sent — we'll reply within 24 hours.</p>
+      </form>
+    </div>
+
+    <div class="reveal-right">
+      <div class="grid g-2 stagger">
+        <div class="cart-card reveal"><h3 style="font-size:.95rem;color:var(--gold)">📧 Email</h3><p class="lead" style="font-size:.85rem;margin-top:8px">support@stackly.gg</p></div>
+        <div class="cart-card reveal"><h3 style="font-size:.95rem;color:var(--gold)">📞 Phone</h3><p class="lead" style="font-size:.85rem;margin-top:8px">+91 80 4567 1234</p></div>
+        <div class="cart-card reveal"><h3 style="font-size:.95rem;color:var(--gold)">💬 Live Chat</h3><p class="lead" style="font-size:.85rem;margin-top:8px">Available 24/7 in-app</p></div>
+        <div class="cart-card reveal"><h3 style="font-size:.95rem;color:var(--gold)">📍 HQ</h3><p class="lead" style="font-size:.85rem;margin-top:8px">Indiranagar, Bengaluru</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. STORE LOCATIONS -->
+<section class="section-alt">
+  <div class="wrap">
+    <div class="section-head center"><div class="eyebrow">Spawn Points</div><h2>Store Locations</h2></div>
+    <div class="grid g-3 stagger">
+      <div class="cart-card reveal"><h3 style="font-size:1rem">Bengaluru — Indiranagar</h3><p class="lead" style="font-size:.85rem;margin-top:8px">100 Feet Rd · Open 10AM–9PM</p></div>
+      <div class="cart-card reveal"><h3 style="font-size:1rem">Mumbai — Andheri</h3><p class="lead" style="font-size:.85rem;margin-top:8px">Link Rd · Open 10AM–9PM</p></div>
+      <div class="cart-card reveal"><h3 style="font-size:1rem">Delhi — Nehru Place</h3><p class="lead" style="font-size:.85rem;margin-top:8px">IT Market · Open 10AM–8PM</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. SUPPORT HOURS -->
+<section>
+  <div class="wrap grid g-2" style="align-items:center;gap:60px">
+    <div class="reveal-left">
+      <div class="eyebrow">Uptime</div>
+      <h2>Support Hours</h2>
+      <p class="lead" style="margin-top:16px">Live chat and phone support run around the clock. In-store visits and repair drop-offs follow local store hours.</p>
+    </div>
+    <div class="cart-card reveal-right" style="padding:32px">
+      <div class="flex-between" style="padding:10px 0;border-bottom:1px solid var(--line-soft)"><span>Live Chat</span><span class="badge badge-mint">24/7</span></div>
+      <div class="flex-between" style="padding:10px 0;border-bottom:1px solid var(--line-soft)"><span>Phone Support</span><span style="color:var(--ash);font-size:.85rem">9AM – 11PM</span></div>
+      <div class="flex-between" style="padding:10px 0;border-bottom:1px solid var(--line-soft)"><span>In-Store Repairs</span><span style="color:var(--ash);font-size:.85rem">10AM – 9PM</span></div>
+      <div class="flex-between" style="padding:10px 0"><span>Email Response</span><span style="color:var(--ash);font-size:.85rem">Within 24hr</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. MINI FAQ -->
+<section class="section-alt">
+  <div class="wrap" style="max-width:760px">
+    <div class="section-head center"><div class="eyebrow">Quick Answers</div><h2>Before You Ask</h2></div>
+    <div class="accordion">
+      <div class="accordion-item"><button>How do I track my order? <span class="plus">+</span></button><div class="accordion-panel"><p>You'll receive a tracking link by email as soon as your order ships — also visible in your dashboard.</p></div></div>
+      <div class="accordion-item"><button>What's your return window? <span class="plus">+</span></button><div class="accordion-panel"><p>30 days for unopened items, with free return shipping on defective products.</p></div></div>
+      <div class="accordion-item"><button>Can I book a repair without visiting in person? <span class="plus">+</span></button><div class="accordion-panel"><p>Yes, mail-in repair kits are available — request one through this contact form.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 & 8. SOCIAL PROOF + LINKS -->
+<section>
+  <div class="wrap grid g-2 stagger contact-testimonials">
+    <div class="cart-card reveal"><p class="lead" style="font-style:italic">"Support replied in 20 minutes on a Sunday. Unheard of."</p><p style="margin-top:14px;font-family:var(--font-mono);font-size:.78rem;color:var(--gold)">— Nikhil T.</p></div>
+    <div class="cart-card reveal"><p class="lead" style="font-style:italic">"Walked into the Indiranagar store, walked out with a fixed controller in 40 minutes."</p><p style="margin-top:14px;font-family:var(--font-mono);font-size:.78rem;color:var(--gold)">— Fatima R.</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="grid footer-grid">
+      <div>
+        <a href="index.html" class="logo" aria-label="Stackly home"><img class="site-logo" src="assets/stackly-logo.webp" alt="Stackly"></a>
+        <p class="lead" style="margin-top:14px;font-size:.88rem">Your local gaming store, shipping nationwide since 2016.</p>
+        <div class="social-row" style="margin-top:20px"><a href="#">X</a><a href="#">IG</a><a href="#">YT</a><a href="#">DC</a></div>
+      </div>
+      <div><h4>Shop</h4><ul><li><a href="services.html">PC Builds</a></li><li><a href="services.html">Consoles</a></li><li><a href="services.html">Peripherals</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Support</h4><ul><li><a href="contact.html">Help Center</a></li><li><a href="services.html">Warranty</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Stackly Gaming Co. All rights reserved.</span><span>Made for players, by players.</span></div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="authModal">
+  <div class="modal-box">
+    <button class="modal-close" aria-label="Close">✕</button>
+    <div class="auth-tabs"><button id="tabLogin" class="active">Log In</button><button id="tabSignup">Sign Up</button></div>
+    <form id="formLogin">
+      <div class="field"><label>Email</label><input type="email" placeholder="you@email.com" required></div>
+      <div class="field"><label>Password</label><input type="password" placeholder="••••••••" required></div>
+      <button type="submit" class="btn btn-primary btn-block">Enter the Arcade</button>
+      <p class="form-note">Tip: use an email containing "admin" to preview the admin dashboard.</p>
+    </form>
+    <form id="formSignup" style="display:none">
+      <div class="field"><label>Gamertag</label><input type="text" placeholder="Your display name" required></div>
+      <div class="field"><label>Email</label><input type="email" placeholder="you@email.com" required></div>
+      <div class="field"><label>Password</label><input type="password" placeholder="Create a password" required></div>
+      <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+    </form>
+    <div class="auth-switch"><span>New here? <button data-switch-auth="signup">Sign up</button></span></div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

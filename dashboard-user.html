@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Dashboard — Stackly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+</head>
+<body>
+
+<div class="dash">
+  <!-- SIDEBAR -->
+  <aside class="dash-side">
+    <a href="dashboard-user.html" class="logo" aria-label="User dashboard home"><img class="site-logo" src="assets/stackly-logo.webp" alt="Stackly"></a>
+    <a href="#overview" class="dash-link active">🏠 Overview</a>
+    <a href="#orders" class="dash-link">📦 My Orders</a>
+    <a href="#wishlist" class="dash-link">❤️ Wishlist</a>
+    <a href="#library" class="dash-link">🎮 Game Library</a>
+    <a href="#rewards" class="dash-link">⭐ Rewards & XP</a>
+    <a href="#profile" class="dash-link">👤 Profile Settings</a>
+    <a href="#support" class="dash-link">🎧 Support Tickets</a>
+    <a href="index.html" class="dash-link logout">🚪 Log Out</a>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="dash-main">
+    <div class="dash-topbar">
+      <div>
+        <button class="btn btn-ghost btn-sm dash-toggle" id="dashToggleBtn">☰ Menu</button>
+        <h2 id="dashboardWelcome" style="text-transform:none;font-family:var(--font-body);font-weight:700;font-size:1.4rem">Welcome back ⚡</h2>
+        <p style="color:var(--ash);font-size:.88rem;margin-top:4px">Level 12 Player · 3,240 XP to next tier</p>
+      </div>
+      <div style="display:flex;gap:12px;align-items:center">
+        <span class="badge badge-gold">Gold Member</span>
+        <button class="avatar profile-button" id="dashboardAvatar" type="button" aria-label="Open profile settings">U</button>
+      </div>
+    </div>
+
+    <!-- XP bar -->
+    <div class="panel-block" id="overview">
+      <div class="flex-between" style="margin-bottom:10px">
+        <h3 style="margin:0">Level Progress</h3>
+        <span style="font-family:var(--font-mono);font-size:.78rem;color:var(--gold)">6,760 / 10,000 XP</span>
+      </div>
+      <div class="xp-bar" data-fill="68"><div class="fill"></div></div>
+    </div>
+
+    <!-- KPI cards -->
+    <div class="grid kpi-grid">
+      <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Total Orders</span></div><div class="num" data-count="14">0</div><div class="delta up">▲ 2 this month</div></div>
+      <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Total Spent</span></div><div class="num">₹1,42,300</div><div class="delta up">▲ 12% vs last month</div></div>
+      <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Wishlist Items</span></div><div class="num" data-count="7">0</div><div class="delta">3 on sale now</div></div>
+      <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Reward Credit</span></div><div class="num">₹850</div><div class="delta up">Redeemable now</div></div>
+    </div>
+
+    <div class="grid two-col">
+      <!-- Orders table -->
+      <div class="panel-block" id="orders">
+        <h3>Recent Orders</h3>
+        <table>
+          <thead><tr><th>Order</th><th>Item</th><th>Date</th><th>Status</th><th>Total</th></tr></thead>
+          <tbody>
+            <tr><td>#NF1042</td><td>Aurora RTX Rig</td><td>Aug 10</td><td><span class="status-pill status-shipped">Shipped</span></td><td>₹1,89,999</td></tr>
+            <tr><td>#NF1039</td><td>Specter Wireless Pad</td><td>Aug 3</td><td><span class="status-pill status-pending">Processing</span></td><td>₹4,299</td></tr>
+            <tr><td>#NF1021</td><td>Vantage 27" Monitor</td><td>Jul 22</td><td><span class="status-pill status-shipped">Delivered</span></td><td>₹32,499</td></tr>
+            <tr><td>#NF0988</td><td>Console Skin Set</td><td>Jul 3</td><td><span class="status-pill status-cancelled">Cancelled</span></td><td>₹1,899</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Spending chart -->
+      <div class="panel-block" id="rewards">
+        <h3>Monthly Spending</h3>
+        <canvas id="spendChart" height="200"></canvas>
+      </div>
+    </div>
+
+    <div class="grid two-col">
+      <!-- Wishlist -->
+      <div class="panel-block" id="wishlist">
+        <h3>Wishlist</h3>
+        <div class="grid g-2">
+          <div class="cart-card" style="padding:18px"><h3 style="font-size:.9rem">Nova VR Headset</h3><p style="color:var(--gold);margin-top:8px;font-size:.9rem">₹54,999</p></div>
+          <div class="cart-card" style="padding:18px"><h3 style="font-size:.9rem">Ronin Mechanical KB</h3><p style="color:var(--gold);margin-top:8px;font-size:.9rem">₹8,499</p></div>
+          <div class="cart-card" style="padding:18px"><h3 style="font-size:.9rem">Pulse Gaming Chair</h3><p style="color:var(--gold);margin-top:8px;font-size:.9rem">₹22,999</p></div>
+          <div class="cart-card" style="padding:18px"><h3 style="font-size:.9rem">Halo Studio Headset</h3><p style="color:var(--gold);margin-top:8px;font-size:.9rem">₹6,999</p></div>
+        </div>
+      </div>
+
+      <!-- Game library -->
+      <div class="panel-block" id="library">
+        <h3>Game Library</h3>
+        <ul style="display:flex;flex-direction:column;gap:14px">
+          <li class="flex-between"><span>Velocity Drift X</span><span class="badge badge-mint">Installed</span></li>
+          <li class="flex-between"><span>Shattered Realms</span><span class="badge badge-mint">Installed</span></li>
+          <li class="flex-between"><span>Nightfall Protocol</span><span class="badge badge-gold">Download</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Profile & Support -->
+    <div class="grid two-col">
+      <div class="panel-block" id="profile">
+        <h3>Profile Settings</h3>
+        <div class="field"><label>Display Name</label><input id="dashboardDisplayName" type="text" value=""></div>
+        <div class="field"><label>Email</label><input id="dashboardEmail" type="email" value=""></div>
+        <button class="btn btn-primary btn-sm">Save Changes</button>
+      </div>
+      <div class="panel-block" id="support">
+        <h3>Support Tickets</h3>
+        <table>
+          <thead><tr><th>Ticket</th><th>Topic</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>#T-204</td><td>Warranty claim</td><td><span class="status-pill status-pending">Open</span></td></tr>
+            <tr><td>#T-198</td><td>Order delay</td><td><span class="status-pill status-shipped">Resolved</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="main.js"></script>
+<script>
+  document.getElementById('dashToggleBtn')?.addEventListener('click', () => {
+    document.querySelector('.dash-side').classList.toggle('open');
+  });
+  window.addEventListener('load', () => {
+    const ctx = document.getElementById('spendChart');
+    if (ctx && window.Chart) {
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Mar','Apr','May','Jun','Jul','Aug'],
+          datasets: [{
+            label: 'Spend (₹)',
+            data: [8200, 15400, 9800, 21200, 34500, 22300],
+            borderColor: '#f5b301',
+            backgroundColor: 'rgba(245,179,1,0.15)',
+            tension: 0.4,
+            fill: true,
+            pointBackgroundColor: '#f5b301'
+          }]
+        },
+        options: {
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { grid: { color: 'rgba(255,255,255,0.06)' }, ticks: { color: '#9a93ab' } },
+            y: { grid: { color: 'rgba(255,255,255,0.06)' }, ticks: { color: '#9a93ab' } }
+          }
+        }
+      });
+    }
+  });
+</script>
+</body>
+</html>
