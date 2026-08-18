@@ -112,7 +112,7 @@
     <div class="eyebrow" style="justify-content:center">Patch Subscribe</div>
     <h2>Get New Posts First</h2>
     <p class="lead" style="margin:14px auto 26px">One email a week. Hardware breakdowns, guides, and the occasional hot take.</p>
-    <form class="hero-search" style="margin:0 auto" onsubmit="return false;">
+    <form class="hero-search" style="margin:0 auto" onsubmit="event.preventDefault();location.href='404.html'">
       <input type="email" placeholder="you@email.com" required>
       <button class="newsletter-submit" type="submit">Subscribe</button>
     </form>

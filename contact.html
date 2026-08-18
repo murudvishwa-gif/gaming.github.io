@@ -61,7 +61,7 @@
             <option>General Question</option>
           </select>
         </div>
-        <div class="field"><label>Message</label><textarea placeholder="How can we help?" required></textarea></div>
+        <div class="field"><label for="contactMessage">Message</label><textarea id="contactMessage" maxlength="500" placeholder="How can we help?" required></textarea><small class="message-count" id="messageCount">0 / 500</small></div>
         <button type="submit" class="btn btn-primary btn-block">Send Message</button>
         <p class="form-note form-success" style="display:none;color:var(--mint)">✓ Message sent — we'll reply within 24 hours.</p>
       </form>
