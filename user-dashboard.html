@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="style.css?v=20260818-3">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
 </head>
-<body>
+<body data-dashboard-role="user">
 
 <div class="dash">
   <!-- SIDEBAR -->
@@ -54,6 +54,8 @@
       <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Total Spent</span></div><div class="num">₹1,42,300</div><div class="delta up">▲ 12% vs last month</div></div>
       <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Wishlist Items</span></div><div class="num" data-count="7">0</div><div class="delta">3 on sale now</div></div>
       <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Reward Credit</span></div><div class="num">₹850</div><div class="delta up">Redeemable now</div></div>
+      <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Games Owned</span></div><div class="num" data-count="26">0</div><div class="delta up">3 added this month</div></div>
+      <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Play Time</span></div><div class="num">184h</div><div class="delta">Across 12 games</div></div>
     </div>
 
     <div class="grid two-col">
@@ -69,6 +71,10 @@
             <tr><td>#NF0988</td><td>Console Skin Set</td><td>Jul 3</td><td><span class="status-pill status-cancelled">Cancelled</span></td><td>₹1,899</td></tr>
           </tbody>
         </table>
+        <div class="dashboard-detail-grid">
+          <article class="dashboard-detail-card"><span>Next delivery</span><strong>Aurora RTX Rig</strong><small>Expected Aug 21 · Bengaluru Hub</small></article>
+          <article class="dashboard-detail-card"><span>Returns window</span><strong>2 eligible items</strong><small>Free pickup available until Aug 29</small></article>
+        </div>
       </div>
 
       <!-- Rewards and XP -->
@@ -79,6 +85,7 @@
         <h4 class="reward-subtitle">Gold benefits</h4>
         <ul class="reward-benefits"><li>Early access to selected game drops</li><li>Priority player support</li><li>Double XP during monthly events</li></ul>
         <div class="reward-activity"><span>Latest reward</span><strong>+250 XP</strong><small>Completed your August game purchase</small></div>
+        <div class="activity-list"><div><span>Wrote a verified review</span><strong>+100 XP</strong></div><div><span>Weekly login streak</span><strong>+75 XP</strong></div><div><span>Referred a friend</span><strong>+300 XP</strong></div></div>
       </div>
     </div>
 
@@ -91,7 +98,10 @@
           <div class="cart-card" style="padding:18px"><h3 style="font-size:.9rem">Ronin Mechanical KB</h3><p style="color:var(--gold);margin-top:8px;font-size:.9rem">₹8,499</p></div>
           <div class="cart-card" style="padding:18px"><h3 style="font-size:.9rem">Pulse Gaming Chair</h3><p style="color:var(--gold);margin-top:8px;font-size:.9rem">₹22,999</p></div>
           <div class="cart-card" style="padding:18px"><h3 style="font-size:.9rem">Halo Studio Headset</h3><p style="color:var(--gold);margin-top:8px;font-size:.9rem">₹6,999</p></div>
+          <div class="cart-card" style="padding:18px"><h3 style="font-size:.9rem">Apex Pro Controller</h3><p style="color:var(--gold);margin-top:8px;font-size:.9rem">₹7,499</p></div>
+          <div class="cart-card" style="padding:18px"><h3 style="font-size:.9rem">Lumen RGB Desk Mat</h3><p style="color:var(--gold);margin-top:8px;font-size:.9rem">₹2,299</p></div>
         </div>
+        <div class="section-summary"><span>3 items have dropped in price</span><button class="btn btn-primary btn-sm">View Deals</button></div>
       </div>
 
       <!-- Game library -->
@@ -101,7 +111,14 @@
           <li class="flex-between"><span>Velocity Drift X</span><span class="badge badge-mint">Installed</span></li>
           <li class="flex-between"><span>Shattered Realms</span><span class="badge badge-mint">Installed</span></li>
           <li class="flex-between"><span>Nightfall Protocol</span><span class="badge badge-gold">Download</span></li>
+          <li class="flex-between"><span>Sky Dominion</span><span class="badge badge-mint">Installed</span></li>
+          <li class="flex-between"><span>Neon District</span><span class="badge badge-gold">Download</span></li>
+          <li class="flex-between"><span>Emberwing</span><span class="badge badge-mint">Installed</span></li>
         </ul>
+        <div class="dashboard-detail-grid">
+          <article class="dashboard-detail-card"><span>Recently played</span><strong>Velocity Drift X</strong><small>42 hours · 68% complete</small></article>
+          <article class="dashboard-detail-card"><span>Next achievement</span><strong>Night Racer</strong><small>Win 3 more midnight events</small></article>
+        </div>
       </div>
     </div>
 
@@ -111,6 +128,11 @@
         <h3>Profile Settings</h3>
         <div class="field"><label>Display Name</label><input id="dashboardDisplayName" type="text" value=""></div>
         <div class="field"><label>Email</label><input id="dashboardEmail" type="email" value=""></div>
+        <div class="field"><label>Gaming platform</label><select><option>PC</option><option>PlayStation</option><option>Xbox</option></select></div>
+        <div class="field"><label>Country</label><select><option>India</option><option>United States</option><option>United Kingdom</option></select></div>
+        <div class="field"><label>Favorite genre</label><select><option>Action</option><option>Racing</option><option>Adventure</option><option>Sports</option></select></div>
+        <div class="field"><label>Bio</label><textarea rows="3" placeholder="Tell the community how you play"></textarea></div>
+        <label class="dashboard-check"><input type="checkbox" checked> Send release and reward notifications</label>
         <button class="btn btn-primary btn-sm">Save Changes</button>
       </div>
       <div class="panel-block" id="support">
@@ -120,8 +142,13 @@
           <tbody>
             <tr><td>#T-204</td><td>Warranty claim</td><td><span class="status-pill status-pending">Open</span></td></tr>
             <tr><td>#T-198</td><td>Order delay</td><td><span class="status-pill status-shipped">Resolved</span></td></tr>
+            <tr><td>#T-185</td><td>Account rewards</td><td><span class="status-pill status-shipped">Resolved</span></td></tr>
+            <tr><td>#T-171</td><td>Game activation</td><td><span class="status-pill status-shipped">Resolved</span></td></tr>
+            <tr><td>#T-160</td><td>Refund request</td><td><span class="status-pill status-shipped">Resolved</span></td></tr>
+            <tr><td>#T-149</td><td>Profile update</td><td><span class="status-pill status-shipped">Resolved</span></td></tr>
           </tbody>
         </table>
+        <div class="section-summary"><span>Average response time: 12 minutes</span><button class="btn btn-primary btn-sm">New Ticket</button></div>
       </div>
     </div>
   </main>

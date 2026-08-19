@@ -17,8 +17,9 @@
         <form class="premium-auth-form" id="formLogin">
           <div class="field"><label for="loginEmail">Email address</label><input id="loginEmail" type="email" placeholder="you@email.com" autocomplete="email" required></div>
           <div class="field"><label for="loginPassword">Password</label><input id="loginPassword" type="password" placeholder="Enter your password" autocomplete="current-password" minlength="6" required></div>
+          <div class="field"><label for="loginRole">Account type</label><select id="loginRole" name="role" required><option value="user">User</option><option value="admin">Admin</option></select></div>
           <div class="auth-options"><label><input type="checkbox"> Remember me</label><a href="404.html">Forgot password?</a></div>
-          <button class="btn btn-primary" type="submit">Log In</button>
+          <button class="btn btn-primary" type="submit">Log In to Dashboard</button>
         </form>
         <p class="auth-page-switch">New to Stackly? <a href="signup.html">Create an account</a></p>
         <div class="auth-trust"><span>Secure sign in</span><span>24/7 support</span><span>Privacy protected</span></div>

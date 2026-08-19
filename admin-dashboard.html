@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="style.css?v=20260818-3">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
 </head>
-<body>
+<body data-dashboard-role="admin">
 
 <div class="dash">
   <!-- SIDEBAR -->
@@ -30,12 +30,12 @@
     <div class="dash-topbar">
       <div>
         <button class="btn btn-ghost btn-sm dash-toggle" id="dashToggleBtn">☰ Menu</button>
-        <h2 style="text-transform:none;font-family:var(--font-body);font-weight:700;font-size:1.4rem">Admin Control Room</h2>
+        <h2 id="dashboardWelcome" style="text-transform:none;font-family:var(--font-body);font-weight:700;font-size:1.4rem">Welcome back</h2>
         <p style="color:var(--ash);font-size:.88rem;margin-top:4px">Stackly Store · Friday, 14 Aug 2026</p>
       </div>
       <div style="display:flex;gap:12px;align-items:center">
         <span class="badge badge-coral">Admin Access</span>
-        <div class="avatar" style="background:linear-gradient(135deg,var(--gold),var(--coral))">SA</div>
+        <div class="avatar" id="dashboardAvatar" style="background:linear-gradient(135deg,var(--gold),var(--coral))">A</div>
       </div>
     </div>
 
@@ -45,12 +45,16 @@
       <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Orders (MTD)</span></div><div class="num" data-count="642">0</div><div class="delta up">▲ 4.6%</div></div>
       <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">New Customers</span></div><div class="num" data-count="128">0</div><div class="delta up">▲ 18 today</div></div>
       <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Low Stock Alerts</span></div><div class="num" data-count="6">0</div><div class="delta down">▼ needs attention</div></div>
+      <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Open Tickets</span></div><div class="num" data-count="23">0</div><div class="delta">8 high priority</div></div>
+      <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Conversion</span></div><div class="num">4.8%</div><div class="delta up">▲ 0.6% this month</div></div>
+      <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Site Visitors</span></div><div class="num">48.2K</div><div class="delta up">▲ 11.4%</div></div>
     </div>
 
     <div class="grid two-col">
       <div class="panel-block" id="analytics">
         <h3>Sales Overview</h3>
         <canvas id="salesChart" height="220"></canvas>
+        <div class="dashboard-detail-grid"><article class="dashboard-detail-card"><span>Gross margin</span><strong>31.8%</strong><small>Up 2.1% month over month</small></article><article class="dashboard-detail-card"><span>Average order</span><strong>₹18,640</strong><small>Across 642 orders</small></article><article class="dashboard-detail-card"><span>Refund rate</span><strong>1.7%</strong><small>Below 2% target</small></article><article class="dashboard-detail-card"><span>Cart recovery</span><strong>₹2.8L</strong><small>From email campaigns</small></article><article class="dashboard-detail-card"><span>New sessions</span><strong>62%</strong><small>29.9K first-time visits</small></article></div>
       </div>
       <div class="panel-block">
         <h3>Top Products</h3>
@@ -77,6 +81,11 @@
           <tr><td>#NF1039</td><td>Fatima R.</td><td>Specter Wireless Pad</td><td><span class="status-pill status-cancelled">Cancelled</span></td><td>₹4,299</td><td><button class="btn btn-ghost btn-sm">View</button></td></tr>
         </tbody>
       </table>
+      <div class="dashboard-detail-grid">
+        <article class="dashboard-detail-card"><span>Awaiting dispatch</span><strong>18 orders</strong><small>5 must ship before 4:00 PM</small></article>
+        <article class="dashboard-detail-card"><span>Returns today</span><strong>4 requests</strong><small>₹18,740 pending review</small></article>
+        <article class="dashboard-detail-card"><span>Payment review</span><strong>2 flagged</strong><small>Manual verification required</small></article>
+      </div>
     </div>
 
     <div class="grid two-col">
@@ -92,6 +101,7 @@
             <tr><td>Nova VR Headset</td><td>22</td><td><span class="status-pill status-shipped">In Stock</span></td></tr>
           </tbody>
         </table>
+        <div class="activity-list"><div><span>Reorder: Vantage Monitor</span><strong>40 units</strong></div><div><span>Incoming: Specter Pad</span><strong>Aug 22</strong></div><div><span>Warehouse utilization</span><strong>78%</strong></div></div>
       </div>
 
       <!-- Customers -->
@@ -101,7 +111,10 @@
           <li style="display:flex;align-items:center;gap:12px"><div class="avatar">AR</div><div><div style="font-size:.9rem">Arjun M.</div><div style="font-size:.75rem;color:var(--ash)">Gold Member · 14 orders</div></div></li>
           <li style="display:flex;align-items:center;gap:12px"><div class="avatar">PS</div><div><div style="font-size:.9rem">Priya S.</div><div style="font-size:.75rem;color:var(--ash)">Silver Member · 6 orders</div></div></li>
           <li style="display:flex;align-items:center;gap:12px"><div class="avatar">RK</div><div><div style="font-size:.9rem">Rehan K.</div><div style="font-size:.75rem;color:var(--ash)">Gold Member · 22 orders</div></div></li>
+          <li style="display:flex;align-items:center;gap:12px"><div class="avatar">FR</div><div><div style="font-size:.9rem">Fatima R.</div><div style="font-size:.75rem;color:var(--ash)">Silver Member · 8 orders</div></div></li>
+          <li style="display:flex;align-items:center;gap:12px"><div class="avatar">VN</div><div><div style="font-size:.9rem">Vikram N.</div><div style="font-size:.75rem;color:var(--ash)">Platinum Member · 31 orders</div></div></li>
         </ul>
+        <div class="dashboard-detail-grid"><article class="dashboard-detail-card"><span>Repeat buyers</span><strong>42%</strong><small>Up 6% this month</small></article><article class="dashboard-detail-card"><span>Average value</span><strong>₹12,840</strong><small>Per active customer</small></article></div>
       </div>
     </div>
 
@@ -114,14 +127,23 @@
           <tbody>
             <tr><td>Is 4K/120fps Worth It?</td><td><span class="status-pill status-shipped">Published</span></td></tr>
             <tr><td>Team Vortex Practice Routine</td><td><span class="status-pill status-pending">Draft</span></td></tr>
+            <tr><td>August Hardware Buying Guide</td><td><span class="status-pill status-shipped">Published</span></td></tr>
+            <tr><td>Top Indie Releases This Week</td><td><span class="status-pill status-pending">Review</span></td></tr>
           </tbody>
         </table>
+        <div class="activity-list"><div><span>Scheduled: Best Co-op Games</span><strong>Aug 23</strong></div><div><span>Pending comments</span><strong>18</strong></div><div><span>Monthly readers</span><strong>24.6K</strong></div></div>
         <button class="btn btn-primary btn-sm" style="margin-top:16px">+ New Post</button>
       </div>
       <div class="panel-block" id="settings">
         <h3>Store Settings</h3>
         <div class="field"><label>Store Name</label><input type="text" value="Stackly Gaming Co."></div>
         <div class="field"><label>Support Email</label><input type="email" value="support@stackly.gg"></div>
+        <div class="field"><label>Default Currency</label><select><option>INR (₹)</option><option>USD ($)</option><option>EUR (€)</option></select></div>
+        <div class="field"><label>Tax Region</label><select><option>India GST</option><option>International</option></select></div>
+        <div class="field"><label>Order Prefix</label><input type="text" value="NF"></div>
+        <label class="dashboard-check"><input type="checkbox" checked> Accept new orders</label>
+        <label class="dashboard-check"><input type="checkbox" checked> Send low-stock alerts</label>
+        <label class="dashboard-check"><input type="checkbox"> Enable maintenance mode</label>
         <button class="btn btn-primary btn-sm">Save Settings</button>
       </div>
     </div>
