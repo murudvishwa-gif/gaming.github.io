@@ -13,8 +13,12 @@ function renderSiteFooter(){
   const footer=document.querySelector('body > footer')||document.createElement('footer');
   footer.className='premium-footer';
   footer.innerHTML=`<div class="footer-shell"><div class="footer-main"><div class="footer-intro"><a href="index.html" aria-label="Stackly home"><img class="site-logo footer-logo" src="assets/stackly-logo.webp" alt="Stackly"></a><p>Your premium destination for cinematic games, expert hardware, and a community that never stops playing.</p><div class="premium-socials">${social.map(([n,p])=>`<a href="404.html" aria-label="${n}">${icon(n,p)}</a>`).join('')}</div></div><div class="footer-column"><h3>Quick Links</h3><a href="index.html">Home</a><a href="about.html">About Us</a><a href="index.html#catalog">Games</a><a href="services.html">Services</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></div><div class="footer-column"><h3>Services</h3><a href="services.html">Custom Builds</a><a href="services.html">Repairs</a><a href="services.html">Game Coaching</a><a href="contact.html">Customer Support</a></div><div class="footer-column"><h3>Help & Legal</h3><a href="404.html">Help Centre</a><a href="404.html">Account</a><a href="404.html">Terms of Use</a><a href="404.html">Privacy</a></div><div class="footer-newsletter"><h3>Stay in the Game</h3><p>Weekly releases, hardware guides, and members-only drops.</p><form class="footer-subscribe-form"><label class="sr-only" for="footerEmail">Email address</label><input id="footerEmail" type="email" placeholder="Email address" required><button type="submit" aria-label="Subscribe">→</button></form><small>No spam. Unsubscribe anytime.</small></div></div><div class="footer-contact"><span>Questions? <a href="404.html">+91 80 4567 1234</a></span><span><a href="404.html">support@stackly.gg</a></span><span>Available 24/7</span></div><div class="footer-bottom"><span>© 2026 Stackly. All rights reserved.</span><span>India · English</span><span>Built for players.</span></div></div>`;
-  const socialUrls=['https://www.instagram.com/','https://www.youtube.com/','https://x.com/','https://www.facebook.com/'];
-  footer.querySelectorAll('.premium-socials a').forEach((link,index)=>{link.href=socialUrls[index];link.target='_blank';link.rel='noopener noreferrer';link.title=link.getAttribute('aria-label')||'Social media'});
+  footer.querySelectorAll('.premium-socials a').forEach(link=>{
+    link.href='404.html';
+    link.removeAttribute('target');
+    link.removeAttribute('rel');
+    link.title=link.getAttribute('aria-label')||'Social media';
+  });
   const footerLinks=footer.querySelectorAll('.footer-column a');
   if(footerLinks[10])footerLinks[10].href='contact.html';
   if(footerLinks[11])footerLinks[11].href='login.html';
@@ -23,6 +27,11 @@ function renderSiteFooter(){
   if(dashboardHome)footer.querySelector('.footer-intro>a')?.setAttribute('href',dashboardHome);
 }
 renderSiteFooter();
+document.querySelectorAll('.social-row a').forEach(link=>{
+  link.href='404.html';
+  link.removeAttribute('target');
+  link.removeAttribute('rel');
+});
 document.querySelector('.footer-subscribe-form')?.addEventListener('submit',event=>{event.preventDefault();location.href='404.html'});
 
 // Shared Stackly page behavior.

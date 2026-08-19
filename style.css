@@ -237,5 +237,16 @@ body:has(.navbar){width:100%;max-width:100%;overflow-x:clip}body:has(.navbar) .w
 @media(max-width:800px){.slider{grid-auto-columns:min(82vw,330px)}.ranked{grid-template-columns:72px minmax(0,1fr)}.rank{padding-right:8px;font-size:4rem;letter-spacing:-6px}.game-row.expanded .slider{grid-template-columns:1fr;padding-block:12px}.game-row.expanded .ranked{grid-template-columns:72px minmax(0,1fr)}.card-info,.ranked .card-info{min-height:82px}.tags{line-height:1.45}.row-head{gap:14px}.row-head h2{min-width:0}.row-head .explore-all{flex:0 0 auto}.footer-main{align-items:start}.premium-footer .footer-column a{margin-bottom:13px;font-size:.9rem!important}}
 @media(max-width:480px){.reward-stats{grid-template-columns:1fr}.rewards-heading{flex-direction:column}.rewards-heading>strong{font-size:1.15rem}}
 
+/* Mobile viewport containment and always-readable game titles */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+@supports(overflow:clip){html,body{overflow-x:clip}}
+@media(max-width:800px){
+  .stream-nav,.navbar,.catalog,.game-row,.premium-footer{max-width:100%}
+  .slider{max-width:100%;overscroll-behavior-x:contain}
+  .game-card .card-info,.ranked .card-info{display:block;height:auto;min-height:88px;overflow:visible;background:#181818}
+  .card-top strong{display:block;min-width:0;color:#fff;font-size:1rem;font-weight:800;line-height:1.35;white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere}
+  .tags{color:#d0d0d0}
+}
+
 /* About page image cards */
 .team-card{padding:0 0 20px;overflow:hidden;text-align:left}.team-photo{display:block;width:100%;aspect-ratio:1;object-fit:cover;object-position:center 30%;margin-bottom:17px}.team-card h3,.team-card p{margin-inline:18px}.team-card h3{font-size:1rem}.team-card p{margin-top:7px;margin-bottom:0;color:var(--ash);font-size:.78rem}.culture-card{position:relative;aspect-ratio:1;margin:0;overflow:hidden;border-radius:5px;background:#181818}.culture-card img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .35s}.culture-card figcaption{position:absolute;inset:auto 0 0;padding:38px 14px 13px;background:linear-gradient(transparent,#000e);font-size:.82rem;font-weight:700}.culture-card:hover img{transform:scale(1.06)}
