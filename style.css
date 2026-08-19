@@ -240,12 +240,18 @@ body:has(.navbar){width:100%;max-width:100%;overflow-x:clip}body:has(.navbar) .w
 /* Mobile viewport containment and always-readable game titles */
 html,body{width:100%;max-width:100%;overflow-x:hidden}
 @supports(overflow:clip){html,body{overflow-x:clip}}
+.game-card>div,.ranked>div{grid-template-rows:auto auto}
+.game-card .card-info,.ranked .card-info{display:block;height:auto;min-height:88px;overflow:visible;background:#181818}
+.card-top strong{display:block;min-width:0;color:#fff;font-weight:800;line-height:1.35;white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere}
+.game-card .tags{display:flex;flex-wrap:wrap;gap:5px 0;color:#d0d0d0;white-space:normal;overflow:visible}
+.game-card .tags span{display:inline-block}
 @media(max-width:800px){
   .stream-nav,.navbar,.catalog,.game-row,.premium-footer{max-width:100%}
   .slider{max-width:100%;overscroll-behavior-x:contain}
-  .game-card .card-info,.ranked .card-info{display:block;height:auto;min-height:88px;overflow:visible;background:#181818}
+  .game-card>div,.ranked>div{grid-template-rows:auto auto}
+  .game-card .card-info,.ranked .card-info{min-height:96px;padding:12px 13px 15px}
   .card-top strong{display:block;min-width:0;color:#fff;font-size:1rem;font-weight:800;line-height:1.35;white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere}
-  .tags{color:#d0d0d0}
+  .tags{color:#d0d0d0;font-size:.76rem;line-height:1.5}
 }
 
 /* About page image cards */
