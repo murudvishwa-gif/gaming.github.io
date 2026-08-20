@@ -304,6 +304,9 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 .chart-bars strong{margin-top:7px;color:#ddd;font-size:.68rem;white-space:nowrap}
 .chart-bars span{margin:4px 0 7px;color:var(--ash);font-size:.7rem}
 
+/* Analytics cards need more horizontal room for charts and metric labels. */
+#analytics .dashboard-subsections>.dashboard-subsection{grid-column:span 6}
+
 @media(max-width:620px){.analytics-chart{height:260px}.chart-bars{gap:5px;padding-inline:5px}.chart-bars strong{display:none}.chart-scale{padding-bottom:24px}}
 
 @media(max-width:620px){
@@ -312,4 +315,5 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
   .dash-main .panel-block>table{margin-inline:0}
   .dashboard-subsections{grid-template-columns:minmax(0,1fr)}
   .dashboard-subsection,.dashboard-subsection:nth-child(1),.dashboard-subsection:nth-child(2){grid-column:1/-1}
+  #analytics .dashboard-subsections>.dashboard-subsection{grid-column:1/-1}
 }
