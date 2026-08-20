@@ -350,3 +350,15 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
   body[data-dashboard-role="admin"] #blog td:nth-child(1)::before{content:'Post'}
   body[data-dashboard-role="admin"] #blog td:nth-child(2)::before{content:'Status'}
 }
+
+/* Lock mobile dashboards to the viewport and prevent horizontal page drift. */
+@media(max-width:900px){
+  html:has(body[data-dashboard-role]),body[data-dashboard-role]{width:100%;max-width:100%;overflow-x:clip;overscroll-behavior-x:none}
+  body[data-dashboard-role] .dash{width:100%;max-width:100%;overflow-x:clip}
+  body[data-dashboard-role] .dash-main{position:relative;width:100%;max-width:100%;overflow-x:clip}
+  body[data-dashboard-role] .dash-main>*{width:100%;max-width:100%}
+  body[data-dashboard-role] .dash-main :is(.grid,.panel-block,.kpi-card,.dashboard-subsections,.dashboard-subsection,.dashboard-detail-grid,.dashboard-detail-card){min-width:0;max-width:100%}
+  body[data-dashboard-role] .dash-side{width:100%!important;max-width:100%!important}
+  body[data-dashboard-role] .dash-side:not(.open){visibility:hidden;pointer-events:none}
+  body[data-dashboard-role] .dash-side.open{visibility:visible}
+}
