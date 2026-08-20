@@ -319,21 +319,24 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 }
 
 /* Mobile dashboard tables become readable cards instead of wide spreadsheets. */
-@media(max-width:620px){
-  body[data-dashboard-role] .dash-main :is(#orders,#inventory,#blog)>table{display:block;min-width:0!important;overflow:visible;white-space:normal}
-  body[data-dashboard-role] .dash-main :is(#orders,#inventory,#blog)>table thead{display:none}
-  body[data-dashboard-role] .dash-main :is(#orders,#inventory,#blog)>table tbody{display:grid;gap:12px;width:100%}
-  body[data-dashboard-role] .dash-main :is(#orders,#inventory,#blog)>table tr{display:grid;width:100%;padding:12px 14px;border:1px solid #343434;border-radius:7px;background:#151515}
-  body[data-dashboard-role] .dash-main :is(#orders,#inventory,#blog)>table td{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;width:100%;min-width:0;padding:8px 0;border-bottom:1px solid #292929;text-align:right;white-space:normal;overflow-wrap:anywhere}
-  body[data-dashboard-role] .dash-main :is(#orders,#inventory,#blog)>table td:last-child{border-bottom:0}
-  body[data-dashboard-role] .dash-main :is(#orders,#inventory,#blog)>table td::before{flex:0 0 38%;color:var(--ash);font:700 .66rem var(--font-mono);text-align:left;text-transform:uppercase;letter-spacing:.04em}
-  body[data-dashboard-role] .dash-main :is(#orders,#inventory,#blog)>table td>*{max-width:60%}
+@media(max-width:760px){
+  body[data-dashboard-role] .dash-main :is(#orders,#inventory,#blog,#support)>table{display:block;min-width:0!important;overflow:visible;white-space:normal}
+  body[data-dashboard-role] .dash-main :is(#orders,#inventory,#blog,#support)>table thead{display:none}
+  body[data-dashboard-role] .dash-main :is(#orders,#inventory,#blog,#support)>table tbody{display:grid;gap:12px;width:100%}
+  body[data-dashboard-role] .dash-main :is(#orders,#inventory,#blog,#support)>table tr{display:grid;width:100%;padding:12px 14px;border:1px solid #343434;border-radius:7px;background:#151515}
+  body[data-dashboard-role] .dash-main :is(#orders,#inventory,#blog,#support)>table td{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;width:100%;min-width:0;padding:8px 0;border-bottom:1px solid #292929;text-align:right;white-space:normal;overflow-wrap:anywhere}
+  body[data-dashboard-role] .dash-main :is(#orders,#inventory,#blog,#support)>table td:last-child{border-bottom:0}
+  body[data-dashboard-role] .dash-main :is(#orders,#inventory,#blog,#support)>table td::before{flex:0 0 38%;color:var(--ash);font:700 .66rem var(--font-mono);text-align:left;text-transform:uppercase;letter-spacing:.04em}
+  body[data-dashboard-role] .dash-main :is(#orders,#inventory,#blog,#support)>table td>*{max-width:60%}
 
   body[data-dashboard-role="user"] #orders td:nth-child(1)::before{content:'Order'}
   body[data-dashboard-role="user"] #orders td:nth-child(2)::before{content:'Item'}
   body[data-dashboard-role="user"] #orders td:nth-child(3)::before{content:'Date'}
   body[data-dashboard-role="user"] #orders td:nth-child(4)::before{content:'Status'}
   body[data-dashboard-role="user"] #orders td:nth-child(5)::before{content:'Total'}
+  body[data-dashboard-role="user"] #support td:nth-child(1)::before{content:'Ticket'}
+  body[data-dashboard-role="user"] #support td:nth-child(2)::before{content:'Topic'}
+  body[data-dashboard-role="user"] #support td:nth-child(3)::before{content:'Status'}
 
   body[data-dashboard-role="admin"] #orders td:nth-child(1)::before{content:'Order'}
   body[data-dashboard-role="admin"] #orders td:nth-child(2)::before{content:'Customer'}
