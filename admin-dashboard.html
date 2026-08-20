@@ -15,21 +15,21 @@
   <!-- SIDEBAR -->
   <aside class="dash-side">
     <a href="admin-dashboard.html" class="logo" aria-label="Admin dashboard home"><img class="site-logo" src="assets/stackly-logo.webp" alt="Stackly"></a>
-    <a href="#overview" class="dash-link active">📊 Overview</a>
-    <a href="#orders" class="dash-link">📦 Orders</a>
-    <a href="#inventory" class="dash-link">🗂️ Inventory</a>
-    <a href="#customers" class="dash-link">👥 Customers</a>
-    <a href="#blog" class="dash-link">📝 Blog Manager</a>
-    <a href="#analytics" class="dash-link">📈 Analytics</a>
-    <a href="#settings" class="dash-link">⚙️ Settings</a>
-    <a href="index.html" class="dash-link logout">🚪 Log Out</a>
+    <a href="#overview" class="dash-link active"><i class="fa-solid fa-chart-line"></i> Overview</a>
+    <a href="#orders" class="dash-link"><i class="fa-solid fa-box"></i> Orders</a>
+    <a href="#inventory" class="dash-link"><i class="fa-solid fa-boxes-stacked"></i> Inventory</a>
+    <a href="#customers" class="dash-link"><i class="fa-solid fa-users"></i> Customers</a>
+    <a href="#blog" class="dash-link"><i class="fa-solid fa-pen-to-square"></i> Blog Manager</a>
+    <a href="#analytics" class="dash-link"><i class="fa-solid fa-chart-column"></i> Analytics</a>
+    <a href="#settings" class="dash-link"><i class="fa-solid fa-gear"></i> Settings</a>
+    <a href="index.html" class="dash-link logout"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
   </aside>
 
   <!-- MAIN -->
   <main class="dash-main">
     <div class="dash-topbar">
       <div>
-        <button class="btn btn-ghost btn-sm dash-toggle" id="dashToggleBtn">☰ Menu</button>
+        <button class="btn btn-ghost btn-sm dash-toggle" id="dashToggleBtn"><i class="fa-solid fa-bars"></i><span>Menu</span></button>
         <h2 id="dashboardWelcome" style="text-transform:none;font-family:var(--font-body);font-weight:700;font-size:1.4rem">Welcome back</h2>
         <p style="color:var(--ash);font-size:.88rem;margin-top:4px">Stackly Store · Friday, 14 Aug 2026</p>
       </div>
@@ -41,13 +41,13 @@
 
     <!-- KPI cards -->
     <div class="grid kpi-grid" id="overview">
-      <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Revenue (MTD)</span></div><div class="num">₹18.4L</div><div class="delta up">▲ 9.2% vs last month</div></div>
-      <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Orders (MTD)</span></div><div class="num" data-count="642">0</div><div class="delta up">▲ 4.6%</div></div>
-      <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">New Customers</span></div><div class="num" data-count="128">0</div><div class="delta up">▲ 18 today</div></div>
-      <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Low Stock Alerts</span></div><div class="num" data-count="6">0</div><div class="delta down">▼ needs attention</div></div>
+      <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Revenue (MTD)</span></div><div class="num">₹18.4L</div><div class="delta up"><i class="fa-solid fa-arrow-trend-up"></i> 9.2% vs last month</div></div>
+      <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Orders (MTD)</span></div><div class="num" data-count="642">0</div><div class="delta up"><i class="fa-solid fa-arrow-trend-up"></i> 4.6%</div></div>
+      <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">New Customers</span></div><div class="num" data-count="128">0</div><div class="delta up"><i class="fa-solid fa-arrow-trend-up"></i> 18 today</div></div>
+      <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Low Stock Alerts</span></div><div class="num" data-count="6">0</div><div class="delta down"><i class="fa-solid fa-arrow-trend-down"></i> needs attention</div></div>
       <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Open Tickets</span></div><div class="num" data-count="23">0</div><div class="delta">8 high priority</div></div>
-      <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Conversion</span></div><div class="num">4.8%</div><div class="delta up">▲ 0.6% this month</div></div>
-      <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Site Visitors</span></div><div class="num">48.2K</div><div class="delta up">▲ 11.4%</div></div>
+      <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Conversion</span></div><div class="num">4.8%</div><div class="delta up"><i class="fa-solid fa-arrow-trend-up"></i> 0.6% this month</div></div>
+      <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Site Visitors</span></div><div class="num">48.2K</div><div class="delta up"><i class="fa-solid fa-arrow-trend-up"></i> 11.4%</div></div>
     </div>
 
     <div class="grid two-col">

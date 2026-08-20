@@ -15,22 +15,22 @@
   <!-- SIDEBAR -->
   <aside class="dash-side">
     <a href="user-dashboard.html" class="logo" aria-label="User dashboard home"><img class="site-logo" src="assets/stackly-logo.webp" alt="Stackly"></a>
-    <a href="#overview" class="dash-link active">🏠 Overview</a>
-    <a href="#orders" class="dash-link">📦 My Orders</a>
-    <a href="#wishlist" class="dash-link">❤️ Wishlist</a>
-    <a href="#library" class="dash-link">🎮 Game Library</a>
-    <a href="#rewards" class="dash-link">⭐ Rewards & XP</a>
-    <a href="#profile" class="dash-link">👤 Profile Settings</a>
-    <a href="#support" class="dash-link">🎧 Support Tickets</a>
-    <a href="index.html" class="dash-link logout">🚪 Log Out</a>
+    <a href="#overview" class="dash-link active"><i class="fa-solid fa-house"></i> Overview</a>
+    <a href="#orders" class="dash-link"><i class="fa-solid fa-box"></i> My Orders</a>
+    <a href="#wishlist" class="dash-link"><i class="fa-solid fa-heart"></i> Wishlist</a>
+    <a href="#library" class="dash-link"><i class="fa-solid fa-gamepad"></i> Game Library</a>
+    <a href="#rewards" class="dash-link"><i class="fa-solid fa-star"></i> Rewards & XP</a>
+    <a href="#profile" class="dash-link"><i class="fa-solid fa-user"></i> Profile Settings</a>
+    <a href="#support" class="dash-link"><i class="fa-solid fa-headset"></i> Support Tickets</a>
+    <a href="index.html" class="dash-link logout"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
   </aside>
 
   <!-- MAIN -->
   <main class="dash-main">
     <div class="dash-topbar">
       <div>
-        <button class="btn btn-ghost btn-sm dash-toggle" id="dashToggleBtn">☰ Menu</button>
-        <h2 id="dashboardWelcome" style="text-transform:none;font-family:var(--font-body);font-weight:700;font-size:1.4rem">Welcome back ⚡</h2>
+        <button class="btn btn-ghost btn-sm dash-toggle" id="dashToggleBtn"><i class="fa-solid fa-bars"></i><span>Menu</span></button>
+        <h2 id="dashboardWelcome" style="text-transform:none;font-family:var(--font-body);font-weight:700;font-size:1.4rem">Welcome back</h2>
         <p style="color:var(--ash);font-size:.88rem;margin-top:4px">Level 12 Player · 3,240 XP to next tier</p>
       </div>
       <div style="display:flex;gap:12px;align-items:center">
@@ -50,8 +50,8 @@
 
     <!-- KPI cards -->
     <div class="grid kpi-grid">
-      <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Total Orders</span></div><div class="num" data-count="14">0</div><div class="delta up">▲ 2 this month</div></div>
-      <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Total Spent</span></div><div class="num">₹1,42,300</div><div class="delta up">▲ 12% vs last month</div></div>
+      <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Total Orders</span></div><div class="num" data-count="14">0</div><div class="delta up"><i class="fa-solid fa-arrow-trend-up"></i> 2 this month</div></div>
+      <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Total Spent</span></div><div class="num">₹1,42,300</div><div class="delta up"><i class="fa-solid fa-arrow-trend-up"></i> 12% vs last month</div></div>
       <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Wishlist Items</span></div><div class="num" data-count="7">0</div><div class="delta">3 on sale now</div></div>
       <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Reward Credit</span></div><div class="num">₹850</div><div class="delta up">Redeemable now</div></div>
       <div class="kpi-card"><div class="top"><span style="color:var(--ash);font-size:.8rem">Games Owned</span></div><div class="num" data-count="26">0</div><div class="delta up">3 added this month</div></div>
