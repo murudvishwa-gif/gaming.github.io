@@ -275,3 +275,41 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 
 /* About page image cards */
 .team-card{padding:0 0 20px;overflow:hidden;text-align:left}.team-photo{display:block;width:100%;aspect-ratio:1;object-fit:cover;object-position:center 30%;margin-bottom:17px}.team-card h3,.team-card p{margin-inline:18px}.team-card h3{font-size:1rem}.team-card p{margin-top:7px;margin-bottom:0;color:var(--ash);font-size:.78rem}.culture-card{position:relative;aspect-ratio:1;margin:0;overflow:hidden;border-radius:5px;background:#181818}.culture-card img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .35s}.culture-card figcaption{position:absolute;inset:auto 0 0;padding:38px 14px 13px;background:linear-gradient(transparent,#000e);font-size:.82rem;font-weight:700}.culture-card:hover img{transform:scale(1.06)}
+
+/* Keep dashboard modules contained instead of spilling into adjacent cards. */
+.dash-main>.grid,.dash-main .panel-block,.dash-main .kpi-card{min-width:0;max-width:100%}
+.dash-main .panel-block{overflow:hidden}
+.dash-main .panel-block>table{display:block;width:100%;max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
+.dash-main canvas{display:block;max-width:100%!important}
+.dashboard-detail-grid{grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr))}
+.dashboard-detail-card,.widget-activity>div{min-width:0}
+.dashboard-detail-card strong,.dashboard-detail-card small,.activity-list span{overflow-wrap:anywhere}
+
+@media(min-width:1251px){
+  .dashboard-subsections>.dashboard-subsection:nth-last-child(-n+2){grid-column:span 6}
+}
+
+/* Analytics stays useful even when the external chart library is unavailable. */
+.dash-main .two-col:has(#analytics){align-items:start}
+.dash-main .two-col:has(#analytics)>.panel-block{height:auto}
+.analytics-chart{position:relative;width:100%;height:320px;margin:8px 0 22px}
+.analytics-chart>canvas{position:absolute;inset:0;width:100%!important;height:100%!important;opacity:0}
+.analytics-chart.chart-ready>canvas{opacity:1}
+.analytics-chart.chart-ready .analytics-chart-fallback{display:none}
+.analytics-chart-fallback{display:grid;grid-template-columns:42px minmax(0,1fr);height:100%;padding-top:12px}
+.chart-scale{display:flex;flex-direction:column;justify-content:space-between;padding:0 8px 28px 0;color:#777;font-size:.65rem;text-align:right}
+.chart-bars{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));align-items:end;gap:clamp(8px,2vw,22px);height:100%;padding:0 12px 0;border-bottom:1px solid #3b3b3b;background:repeating-linear-gradient(to bottom,#292929 0 1px,transparent 1px 25%)}
+.chart-bars>div{display:grid;grid-template-rows:1fr auto auto;align-items:end;justify-items:center;height:100%;min-width:0}
+.chart-bars i{width:min(46px,75%);height:var(--bar);border-radius:6px 6px 0 0;background:linear-gradient(#ff3340,#e50914);box-shadow:0 0 18px #e5091430}
+.chart-bars strong{margin-top:7px;color:#ddd;font-size:.68rem;white-space:nowrap}
+.chart-bars span{margin:4px 0 7px;color:var(--ash);font-size:.7rem}
+
+@media(max-width:620px){.analytics-chart{height:260px}.chart-bars{gap:5px;padding-inline:5px}.chart-bars strong{display:none}.chart-scale{padding-bottom:24px}}
+
+@media(max-width:620px){
+  .dash-main .flex-between,.rewards-heading,.activity-list>div{align-items:flex-start;flex-wrap:wrap}
+  .dash-main .flex-between>*{min-width:0}
+  .dash-main .panel-block>table{margin-inline:0}
+  .dashboard-subsections{grid-template-columns:minmax(0,1fr)}
+  .dashboard-subsection,.dashboard-subsection:nth-child(1),.dashboard-subsection:nth-child(2){grid-column:1/-1}
+}

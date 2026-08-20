@@ -6,7 +6,7 @@
 <title>Admin Dashboard — Stackly</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20260818-3">
+<link rel="stylesheet" href="style.css?v=20260820-1">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
 </head>
 <body data-dashboard-role="admin">
@@ -53,7 +53,20 @@
     <div class="grid two-col">
       <div class="panel-block" id="analytics">
         <h3>Sales Overview</h3>
-        <canvas id="salesChart" height="220"></canvas>
+        <div class="analytics-chart" id="salesChartFrame">
+          <canvas id="salesChart" height="220"></canvas>
+          <div class="analytics-chart-fallback" aria-label="Monthly revenue from March to August">
+            <div class="chart-scale"><span>₹20L</span><span>₹15L</span><span>₹10L</span><span>₹5L</span><span>₹0</span></div>
+            <div class="chart-bars">
+              <div style="--bar:56%"><i></i><strong>₹11.2L</strong><span>Mar</span></div>
+              <div style="--bar:69%"><i></i><strong>₹13.8L</strong><span>Apr</span></div>
+              <div style="--bar:61%"><i></i><strong>₹12.1L</strong><span>May</span></div>
+              <div style="--bar:77%"><i></i><strong>₹15.4L</strong><span>Jun</span></div>
+              <div style="--bar:85%"><i></i><strong>₹16.9L</strong><span>Jul</span></div>
+              <div style="--bar:92%"><i></i><strong>₹18.4L</strong><span>Aug</span></div>
+            </div>
+          </div>
+        </div>
         <div class="dashboard-detail-grid"><article class="dashboard-detail-card"><span>Gross margin</span><strong>31.8%</strong><small>Up 2.1% month over month</small></article><article class="dashboard-detail-card"><span>Average order</span><strong>₹18,640</strong><small>Across 642 orders</small></article><article class="dashboard-detail-card"><span>Refund rate</span><strong>1.7%</strong><small>Below 2% target</small></article><article class="dashboard-detail-card"><span>Cart recovery</span><strong>₹2.8L</strong><small>From email campaigns</small></article><article class="dashboard-detail-card"><span>New sessions</span><strong>62%</strong><small>29.9K first-time visits</small></article></div>
       </div>
       <div class="panel-block">
@@ -177,6 +190,7 @@
           }
         }
       });
+      document.getElementById('salesChartFrame')?.classList.add('chart-ready');
     }
   });
 </script>
